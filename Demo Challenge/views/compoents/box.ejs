@@ -1,0 +1,14 @@
+<form method="POST" action=<%= link %>>
+    
+    <textarea style="resize: none;" class="box1" placeholder="Name" type="text" name="name"><%= box.name %></textarea>
+    <% if(error && error.name) { %>
+        <p style="color: red;"><%= error.name.properties.message %></p>
+        <% } %>
+<br><br>
+    <textarea style="resize: none;" class="box2" placeholder="Massage" type="text" name="message"><%= box.message %></textarea>
+    <% if(error && error.message) { %>
+        <p style="color: red;"><%= error.message.properties.message %></p>
+        <% } %>
+<br><br>
+<button type="submit" class="btn btn-primary">Submit </button>
+</form>

@@ -1,0 +1,40 @@
+<%- include("./compoents/Header.ejs") %>
+
+<div class="ttt">
+
+ <h4>Add a Post</h4>
+    <h1>Welcome To Facebook</h1>
+
+</div>
+
+<%- include("./compoents/box.ejs") %>
+
+
+<% if (data.length > 0) {%>
+    <% data.forEach( value => { %>
+<div class="ttt">
+    <div class="text">
+       <h2 ><%= value.name %></h2>
+        <p><%= value.message %></p><hr>
+    </div>
+    <div>
+      <a href=/feed/<%= value.id %>>See More</a><br>
+      <label><%= value.createdAt.getDate() %>/<%= value.createdAt.getMonth() + 1 %>/<%= value.createdAt.getFullYear() %></label>
+    </div>
+</div>
+    <% }) %>
+    <% } else { %>
+        <h1>Ther is no data</h1>
+    <% } %>
+
+   
+
+  
+
+    
+
+ <%- include("./compoents/footer.ejs") %>
+
+
+
+

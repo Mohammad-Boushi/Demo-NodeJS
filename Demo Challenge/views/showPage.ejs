@@ -1,0 +1,12 @@
+<%- include("./compoents/Header.ejs") %>
+<h1><%= data.name %></h1>
+<p><%= data.message %></p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a class="btn btn-danger" href=/delete/<%= data._id %>>Delete </a>
+<a href=/feed/edit/<%= data.id %> type="submit" class="btn btn-primary">Edit Post </a>
+
+<%- include("./compoents/footer.ejs") %>
+
+
+
